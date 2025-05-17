@@ -12,3 +12,9 @@ const cuadrado = (num) => {
 }
 console.log(cuadrado(10));
 
+/* Crea una arrow function llamada saludoPersonalizado que reciba dos
+parámetros: nombre y edad, y retorne una cadena como la siguiente */
+const saludoPersonalizado = (nombre, edad) => {
+    return `Hola, me llamo ${nombre} y tengo ${edad} años.`;
+}
+console.log(saludoPersonalizado("Eduardo", 21));
