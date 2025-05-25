@@ -17,4 +17,3 @@ function verificarUsuario(usuario) {
 
     verificarUsuario("lalo")
         .then(res=> console.log(res))
-        .catch(err=> console.error(err)); // acceso denegado
