@@ -17,3 +17,26 @@ function verificarUsuario(usuario) {
 
     verificarUsuario("lalo")
         .then(res=> console.log(res))
+        .catch(err=> console.error(err)); // acceso denegado
+
+
+//Crea una función obtenerDatos() que simule una llamada a una API con setTimeout y usar async/await para esperar el resultado.
+function simularPeticionAPI() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve("Datos recibidos coorectamente");
+        }, 5000); // Simula una espera de 5 segundos
+    });
+}
+async function obtenerDatos() { 
+    //usa await para esperar la promesa de simularPeticionAPI
+    //imprime el resultado
+    try {
+        const datos = await simularPeticionAPI();
+        console.log(datos);
+    } catch (error) {
+        console.error("Error al obtener los datos:", error);
+    }
+}
+// usa la funcion async
+obtenerDatos();
