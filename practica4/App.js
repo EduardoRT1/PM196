@@ -2,9 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-web';
 
-const Texto = () => {
+const Texto = (props) => {
+  const {contenido}= props;
   return(
-    <Text>Hola mundo!</Text>
+    <Text>{contenido}</Text>
   );
 }
 
@@ -12,11 +13,12 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      <Text>Hola mundo!</Text>
-      <Texto></Texto>
-      <Texto></Texto>
-      <Texto></Texto>
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
+
+      <Texto contenido='Hola'> </Texto>
+      <Texto contenido='mundo'> </Texto>
+      <Texto contenido='desde'> </Texto>
+      <Texto contenido='React Native'> </Texto>
       <Button title='Presiona aquí'/>
       
     </View>
