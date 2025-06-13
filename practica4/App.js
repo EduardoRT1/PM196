@@ -2,10 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-web';
 
+// Componente Texto que recibe props y muestra el texto dentro de un componente Text
 const Texto = (props) => {
-  const {contenido}= props;
+  const {children}= props;
   return(
-    <Text>{contenido}</Text>
+    <Text>{children}</Text>
   );
 }
 
@@ -15,10 +16,9 @@ export default function App() {
     <View style={styles.container}>
         <StatusBar style="auto" />
 
-      <Texto contenido='Hola'> </Texto>
-      <Texto contenido='mundo'> </Texto>
-      <Texto contenido='desde'> </Texto>
-      <Texto contenido='React Native'> </Texto>
+      <Texto> "hola" </Texto>
+      <Texto> "mundo" </Texto>
+      <Texto> react </Texto>
       <Button title='Presiona aquí'/>
       
     </View>
