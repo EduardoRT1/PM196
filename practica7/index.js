@@ -1,6 +1,6 @@
 import { registerRootComponent } from 'expo';
 
-import App from './practica9';
+import App from './practica10';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
